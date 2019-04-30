@@ -11,16 +11,16 @@ export class TaskDataService {
   add(task:Task){
 
     let tasks:Task[]=[];
-    if(localStorage.getItem('task')!=null)
+    if(localStorage.getItem('tasks')!=null)
     {
-      tasks=JSON.parse(localStorage.getItem('task'));
+      tasks=JSON.parse(localStorage.getItem('tasks'));
     }
     tasks.push(task);
-    localStorage.setItem('task', JSON.stringify(tasks) );
+    localStorage.setItem('tasks', JSON.stringify(tasks) );
     
   }
 
   getAll():Task[]{
-      return JSON.parse(localStorage.getItem('task'));
+      return JSON.parse(localStorage.getItem('tasks'));
   }
 }

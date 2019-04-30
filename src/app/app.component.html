@@ -4,12 +4,11 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<div style="text-align:center">
+<nav style="text-align:center">
   <a routerLink="/tasklist">Listar Tareas</a> - 
   <a routerLink="/taskadd">Agregar Tarea</a>
-  <div>
-    <router-outlet></router-outlet>
-  </div>
+</nav>
+<div>
+  <router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
